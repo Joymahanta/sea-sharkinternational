@@ -1,0 +1,300 @@
+/*Over all all page*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+/*Body*/
+
+#body {
+    background-image: url(formbackground.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/*Anchor tag to remove link trace*/
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+/*Nevigaction bar*/
+
+#header {
+    width: 100%;
+    height: 25vh;
+    background-color: black;
+    display: block;
+
+}
+
+nav {
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    height: 9vh;
+    border-radius: 120px;
+    z-index: 111;
+}
+
+#logo {
+    /* width: 140px; */
+    height: 15vh;
+    margin: 20px 0px;
+    cursor: pointer;
+
+}
+
+nav ul {
+    background-color: black;
+    width: 100%;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color: black;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 1s;
+}
+
+nav.sticky ul {
+    width: auto;
+}
+
+/*Banner*/
+
+#banner {
+    width: 100%;
+    height: 499px;
+    margin: 0 auto;
+
+}
+
+#banner img {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+#banner-text {
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    color: #fff;
+    font-size: 70px;
+    /* background-color: bisque; */
+
+}
+
+#banner p {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+/*hotel rooms*/
+
+#hotel {
+    border: 0px;
+    border-color: rgb(247, 139, 8);
+    margin: 0%;
+    padding: 0%;
+    height: 150px;
+
+}
+
+#align {
+    width: 100%;
+    display: inline;
+
+}
+
+#photo {
+    display: inline-block;
+    width: 15;
+    margin: 5px;
+    max-width: 100%;
+    text-align: center;
+    text-align: center;
+}
+
+#photo img {
+    max-width: 100%;
+    width: 100%;
+}
+
+#caption {
+    border: 1px solid;
+    text-align: center;
+    color: black;
+
+}
+
+#caption:hover {
+    color: black;
+    background-color: red;
+    cursor: grab;
+}
+
+/*form*/
+
+#formbackground {
+    background-image: url(formbackground.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+#form {
+    align-items: center;
+    width: 50%;
+    border: 2px solid brown;
+    margin: 25px auto;
+    padding: 30px 30px;
+    background: rgb(34, 12, 106);
+    background: linear-gradient(145deg, rgba(34, 12, 106, 1) 0%, rgba(101, 23, 213, 1) 7%, rgba(224, 154, 202, 1) 37%, rgba(217, 59, 124, 1) 60%, rgba(33, 136, 235, 1) 91%, rgb(3, 23, 115) 100%);
+    display: block;
+}
+
+#innerform {
+    width: 100%;
+    display: inline-block;
+}
+
+#input {
+    width: 60%;
+    align-items: center;
+    height: 30px;
+    margin: 5px;
+}
+
+#input:hover {
+    color: rgb(23, 237, 241);
+    background-color: rgb(135, 135, 136);
+    cursor: pointer;
+}
+
+#submit {
+    width: 100px;
+    background-color: rgb(224, 154, 202);
+    background: linear-gradient(145deg, rgba(224, 154, 202, 1) 0%, rgba(215, 164, 44, 1) 0%, rgba(235, 255, 80, 1) 100%, rgba(217, 59, 124, 1) 100%, rgba(9, 24, 89, 1) 100%);
+}
+
+#submit:hover {
+    color: rgb(247, 27, 27);
+    background-color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+#formcaption {
+    border: 1px solid;
+    align-items: center;
+    text-align: center;
+    color: black;
+
+}
+
+/* Review*/
+
+#reviewblock {
+    display: inline;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    /* border: 2px solid black;
+    background-color: chartreuse; */
+    overflow: hidden;
+}
+
+#review {
+    display: inline-block;
+    margin: 0 auto;
+    width: 10%;
+    text-align: center;
+    background-color: blue;
+    overflow: hidden;
+}
+
+/*map*/
+
+Map #mapbox {
+    display: inline;
+    width: 100%;
+    /* height: 400px;*/
+}
+
+#map {
+    display: inline;
+    max-width: 40%;
+    align-items: center;
+    margin: 0 auto;
+    display: table;
+}
+
+/*Classwork
+#imagebox{
+    width: 400px;
+    height: 300px;
+    border: 2px solid red;
+    margin: 10px;
+    background-color: rgb(66, 14, 224);
+    position: relative;
+    overflow: hidden;
+}
+#imagebox img{
+    width: 100%;
+    max-width: 100%;
+}
+#imagebox:hover{
+    opacity: .5;
+}*/
