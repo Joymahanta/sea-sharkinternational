@@ -13,7 +13,9 @@
     background-image: url(formbackground.webp);
     background-repeat: no-repeat;
     background-size: cover;
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 /*Anchor tag to remove link trace*/
@@ -28,7 +30,7 @@ a {
 #header {
     width: 100%;
     height: 25vh;
-    background-color: black;
+    background-color: rgb(7, 4, 189);
     display: block;
 
 }
@@ -43,15 +45,15 @@ nav {
 }
 
 #logo {
-    /* width: 140px; */
-    height: 15vh;
+
+    height: 8vh;
     margin: 20px 0px;
     cursor: pointer;
 
 }
 
 nav ul {
-    background-color: black;
+    background-color: #3586ff;
     width: 100%;
     margin-top: 10px;
 }
@@ -71,7 +73,7 @@ nav ul li {
 
 nav ul li::after {
     content: '';
-    background: #f44566;
+    background: rgb(7, 4, 189);
     width: 100%;
     height: 100%;
     border-radius: 30px;
@@ -85,7 +87,7 @@ nav ul li::after {
 }
 
 nav ul li:hover {
-    color: black;
+    color: #3586ff;
 }
 
 nav ul li:hover::after {
@@ -98,7 +100,7 @@ nav.sticky {
     top: 0;
     left: 0;
     padding: 10px 8%;
-    background: black;
+    background: #3586ff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,6 +124,7 @@ nav.sticky ul {
     width: 100%;
     height: 500px;
     position: relative;
+    display: block;
 }
 
 #banner-text {
@@ -143,49 +146,6 @@ nav.sticky ul {
     font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 
-/*hotel rooms*/
-
-#hotel {
-    border: 0px;
-    border-color: rgb(247, 139, 8);
-    margin: 0%;
-    padding: 0%;
-    height: 150px;
-
-}
-
-#align {
-    width: 100%;
-    display: inline;
-
-}
-
-#photo {
-    display: inline-block;
-    width: 15;
-    margin: 5px;
-    max-width: 100%;
-    text-align: center;
-    text-align: center;
-}
-
-#photo img {
-    max-width: 100%;
-    width: 100%;
-}
-
-#caption {
-    border: 1px solid;
-    text-align: center;
-    color: black;
-
-}
-
-#caption:hover {
-    color: black;
-    background-color: red;
-    cursor: grab;
-}
 
 /*form*/
 
@@ -224,15 +184,23 @@ nav.sticky ul {
     cursor: pointer;
 }
 
-#submit {
-    width: 100px;
-    background-color: rgb(224, 154, 202);
-    background: linear-gradient(145deg, rgba(224, 154, 202, 1) 0%, rgba(215, 164, 44, 1) 0%, rgba(235, 255, 80, 1) 100%, rgba(217, 59, 124, 1) 100%, rgba(9, 24, 89, 1) 100%);
+#submit2 {
+    width: 100%;
+    background-color: rgb(224, 252, 252);
+    background: linear-gradient(145deg, rgba(224, 252, 252, 1) 0%, rgba(244, 227, 242, 1) 49%, rgb(200, 225, 249) 100%);
+    text-align: center;
 }
 
-#submit:hover {
-    color: rgb(247, 27, 27);
-    background-color: rgb(51, 51, 51);
+#submit1 {
+    display: inline-block;
+    padding: 0 10px;
+    margin-left: 20px;
+
+}
+
+#submit1:hover {
+    color: rgb(3, 15, 72);
+    background-color: rgb(78, 78, 79);
     cursor: pointer;
 }
 
@@ -243,6 +211,131 @@ nav.sticky ul {
     color: black;
 
 }
+
+/*Rooms*/
+#hotel {
+    width: 100%;
+    position: relative;
+}
+
+#content h3 {
+    font-size: 26px;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color: #232d60;
+    height: 50vh;
+}
+
+#content p {
+    font-size: 19px;
+    color: #6a7199;
+}
+
+#content {
+    display: block;
+    position: relative;
+    animation: moveright 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveright {
+    0% {
+        transform: translateX(-1000px);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+#room {
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+    right: 160px;
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(even) {
+    background-color: #1D2128;
+    color: aliceblue;
+}
+
+section .container{
+    margin: 100px;
+}
+
+section .cards{
+    display: flex;
+}
+
+section .cards .textcard{
+    background: #2696E9;
+    margin: 20px;
+    padding: 25px;
+}
+section .cards .textcard h3{
+    font-size: 15px;
+    text-align:left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+section .cards .textcard p{
+    font-size: 10px;
+    
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+    section h2{
+        font-size: 40px;
+    }
+    section .cards{
+        flex-direction: column;
+    }
+}
+.reveal{
+position: relative;
+transform: translateY(150px);
+opacity: 0;
+transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+opacity: 1;
+}
+
+
+
 
 /* Review*/
 
@@ -261,8 +354,17 @@ nav.sticky ul {
     margin: 0 auto;
     width: 10%;
     text-align: center;
-    background-color: blue;
+    background-color: rgb(255, 243, 201);
+    background: linear-gradient(145deg, rgba(255, 243, 201, 1) 0%, rgba(192, 247, 223, 1) 59%, rgba(240, 240, 240, 1) 100%);
     overflow: hidden;
+}
+/*Advertisement*/
+
+#add{
+    width: 100%;
+    border: 2px solid blue;
+    background: #2696E9;
+    color: #fff;
 }
 
 /*map*/
@@ -281,20 +383,119 @@ Map #mapbox {
     display: table;
 }
 
-/*Classwork
-#imagebox{
-    width: 400px;
-    height: 300px;
-    border: 2px solid red;
-    margin: 10px;
-    background-color: rgb(66, 14, 224);
+
+/* Footer*/
+#footer {
     position: relative;
-    overflow: hidden;
-}
-#imagebox img{
     width: 100%;
-    max-width: 100%;
+    background-color: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-#imagebox:hover{
-    opacity: .5;
-}*/
+
+#scocial_icons,
+#menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+#scocial_icons a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#scocial_icons a:hover {
+    transform: translateY(-10px);
+}
+
+#menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+#menu li a:hover {
+    opacity: 1;
+}
+
+#footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave_02 3s linear infinite;
+}
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animatewave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
